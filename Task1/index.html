@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Porsche 911 Carrera 4S — Landing Experience</title>
+  <meta name="description" content="World-class landing page for Porsche 911 Carrera 4S with immersive 3D model.">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- 3D Model Viewer -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Scroll Animations CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Swiper Carousel CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 data-aos="fade-down">Porsche 911 Carrera 4S</h1>
+
+    <!-- 3D Model -->
+    <model-viewer src="assets/porsche.glb" alt="Porsche 911 Carrera 4S"  camera-controls auto-rotate ar data-aos="fade-up"></model-viewer>
+
+    <p data-aos="fade-up">Experience the perfect blend of iconic design and high-performance engineering. Explore the legendary Porsche 911 Carrera 4S in full 3D.</p>
+
+    <div class="cta" data-aos="fade-up">
+      <button class="btn primary"><i class="fa-solid fa-car-side"></i> Book a Test Drive</button>
+      <button class="btn secondary"><i class="fa-solid fa-info-circle"></i> Learn More</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="section-title" data-aos="fade-up">Features</div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+      <i class="fa-solid fa-bolt"></i>
+      <h3>Powerful Engine</h3>
+      <p>Twin-turbo flat-six engine delivering 443 horsepower and blistering acceleration.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+      <i class="fa-solid fa-gauge-high"></i>
+      <h3>Top Performance</h3>
+      <p>0-100 km/h in 3.4 seconds with adaptive all-wheel drive for ultimate control.</p>
+    </div>
+    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+      <i class="fa-solid fa-car-side"></i>
+      <h3>Iconic Design</h3>
+      <p>LED Matrix headlights, classic silhouette, and luxurious interiors for unmatched style.</p>
+    </div>
+  </section>
+
+  <!-- Interior Section -->
+  <section class="interior">
+    <div class="section-title" data-aos="fade-up">Interior & Comfort</div>
+    <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+      <i class="fa-solid fa-chair"></i>
+      <h3>Luxury Seating</h3>
+      <p>Premium leather seats with customizable options for maximum comfort.</p>
+    </div>
+    <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+      <i class="fa-solid fa-music"></i>
+      <h3>Sound System</h3>
+      <p>High-fidelity surround sound for an immersive driving experience.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <div class="section-title" data-aos="fade-up">Gallery</div>
+    <div class="swiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Porsche Gallery Image 1"></div>
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1601412436403-12a0d3e0b4b1?auto=format&fit=crop&w=800&q=80" alt="Porsche Gallery Image 2"></div>
+        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1603993097397-89e0ef0d9c5a?auto=format&fit=crop&w=800&q=80" alt="Porsche Gallery Image 3"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Performance Section -->
+  <section class="performance">
+    <div class="section-title" data-aos="fade-up">Performance Highlights</div>
+    <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+      <i class="fa-solid fa-road"></i>
+      <h3>Handling & Agility</h3>
+      <p>Advanced suspension and adaptive all-wheel drive for precise cornering.</p>
+    </div>
+    <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+      <i class="fa-solid fa-tachometer-alt"></i>
+      <h3>Top Speed</h3>
+      <p>305 km/h with optimal aerodynamics and engine tuning.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    © 2025 Porsche. All rights reserved.
+  </footer>
+
+  <!-- External JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
