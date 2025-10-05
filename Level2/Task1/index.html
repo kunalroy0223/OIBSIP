@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{
+  display:flex;justify-content:center;align-items:center;height:100vh;
+  background:#121212;color:#fff;
+}
+.calculator{
+  background:#1e1e1e;
+  border-radius:25px;
+  padding:30px;
+  width:350px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+  display:flex; flex-direction:column; align-items:center;
+}
+.display{
+  width:100%; background:#2a2a2a; border-radius:12px;
+  padding:15px; font-size:24px; text-align:right; margin-bottom:20px; overflow-x:auto; color:#fff;
+}
+.buttons{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:15px;
+  width:100%;
+}
+button.calc-btn{
+  padding:20px; border:none; border-radius:12px;
+  font-size:20px; font-weight:600;
+  cursor:pointer; background-color:#2a2a2a; color:#fff; transition:all 0.2s;
+}
+button.calc-btn:hover{transform: scale(1.05); box-shadow:0 5px 15px rgba(255,255,255,0.2);}
+button.operator{background:#ff6a00; color:white;}
+button.operator:hover{transform: scale(1.05); box-shadow:0 5px 15px rgba(255,106,0,0.5);}
+</style>
+</head>
+<body>
+<div class="calculator">
+  <div class="display" id="display">0</div>
+  <div class="buttons">
+    <button class="calc-btn operator" data-value="C">C</button>
+    <button class="calc-btn operator" data-value="DEL">DEL</button>
+    <button class="calc-btn operator" data-value="%">%</button>
+    <button class="calc-btn operator" data-value="/">÷</button>
+
+    <button class="calc-btn" data-value="7">7</button>
+    <button class="calc-btn" data-value="8">8</button>
+    <button class="calc-btn" data-value="9">9</button>
+    <button class="calc-btn operator" data-value="*">×</button>
+
+    <button class="calc-btn" data-value="4">4</button>
+    <button class="calc-btn" data-value="5">5</button>
+    <button class="calc-btn" data-value="6">6</button>
+    <button class="calc-btn operator" data-value="-">−</button>
+
+    <button class="calc-btn" data-value="1">1</button>
+    <button class="calc-btn" data-value="2">2</button>
+    <button class="calc-btn" data-value="3">3</button>
+    <button class="calc-btn operator" data-value="+">+</button>
+
+    <button class="calc-btn" data-value="0" style="grid-column: span 2;">0</button>
+    <button class="calc-btn" data-value=".">.</button>
+    <button class="calc-btn operator" data-value="=">=</button>
+  </div>
+</div>
+
+<script>
+const display = document.getElementById('display');
+let currentInput = '';
+
+document.querySelectorAll('.calc-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const val = btn.dataset.value;
+
+    if(val === 'C'){
+      currentInput = '';
+      display.textContent = '0';
+      return;
+    }
+
+    if(val === 'DEL'){
+      currentInput = currentInput.slice(0,-1);
+      display.textContent = currentInput || '0';
+      return;
+    }
+
+    if(val === '='){
+      try{
+        let result = eval(currentInput);
+        display.textContent = result;
+        currentInput = result.toString();
+      }catch{
+        display.textContent = 'Error';
+        currentInput = '';
+      }
+      return;
+    }
+
+    currentInput += val;
+    display.textContent = currentInput;
+  });
+});
+</script>
+</body>
+</html>
