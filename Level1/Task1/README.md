@@ -69,13 +69,6 @@ This project is a modern, responsive **landing page** showcasing the Porsche 911
 
 ---
 
-## 📸 Preview
-
-![Landing Page Preview](https://picsum.photos/1000/500)
-*(Replace with actual screenshot later)*
-
----
-
 ## 📜 License
 
 This project is for educational/demo purposes only. All rights for Porsche brand and assets belong to their respective owners.
