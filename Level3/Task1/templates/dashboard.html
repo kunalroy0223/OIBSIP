@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container dashboard">
+  <i class="fas fa-user-circle"></i>
+  <h2>Welcome, {{ username }}!</h2>
+  <p>You are now logged in securely.</p>
+  <a href="{{ url_for('logout') }}">
+    <button class="logout-btn"><i class="bi bi-box-arrow-right"></i> Logout</button>
+  </a>
+</div>
+{% endblock %}

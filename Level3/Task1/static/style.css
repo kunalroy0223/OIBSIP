@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  width: 350px;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ----------------- Input Groups ----------------- */
+.input-group {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 40px 10px 40px; /* left padding for prefix icon, right for toggle */
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+}
+
+.input-group .prefix-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.password-group .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* Placeholder text */
+::placeholder {
+  color: rgba(255,255,255,0.8);
+}
+
+/* ----------------- Buttons ----------------- */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #00b09b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #96c93d;
+}
+
+/* ----------------- Logout button on dashboard ----------------- */
+.dashboard .logout-btn {
+  width: auto;       /* smaller, auto width */
+  padding: 8px 20px;
+  font-size: 14px;
+  background: #ff4b4b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dashboard .logout-btn:hover {
+  background: #d63031;
+}
+
+/* ----------------- Errors ----------------- */
+.error {
+  color: #ff6b6b;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ----------------- Links ----------------- */
+.link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.link a {
+  color: #00d4ff;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------- Dashboard ----------------- */
+.dashboard {
+  text-align: center;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.dashboard i {
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+
+/* ----------------- Focus Glow ----------------- */
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px #00d4ff;
+  transition: 0.3s;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px #96c93d;
+}
